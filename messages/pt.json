@@ -25,6 +25,18 @@
     "label": "Portfólio ©2026",
     "loading": "Carregando"
   },
+  "Hero": {
+    "role": "Desenvolvedor Full-stack",
+    "focus": "Foco em front-end e UI/UX",
+    "location": "Brasil · Remoto",
+    "intro": "Construo produtos web e mobile de ponta a ponta em React, Next.js, React Native e Laravel — caprichados na interface, testados por baixo.",
+    "typingPrefix": "construindo com",
+    "stackSr": "Stack: Next.js, React.js, TypeScript, React Native, Laravel/Node.js, Figma e Git.",
+    "ctaWork": "Ver projetos",
+    "ctaCv": "Baixar CV",
+    "scroll": "Role",
+    "social": "Redes"
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",
