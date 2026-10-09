@@ -219,6 +219,41 @@
     "backToTop": "Back to top",
     "rights": "©2026 Mateus Winter"
   },
+  "Project": {
+    "back": "Back to home",
+    "role": "Role",
+    "timeline": "Timeline",
+    "stack": "Stack",
+    "links": "Links",
+    "gallery": "Screens",
+    "galleryHint": "Scroll to browse the screens",
+    "next": "Next",
+    "contents": "Contents",
+    "stats": {
+      "jest": "Jest tests",
+      "playwright": "Playwright tests",
+      "phpunit": "PHPUnit tests"
+    },
+    "diagram": {
+      "title": "Request flow",
+      "browser": "Browser",
+      "next": "Next.js server",
+      "routes": "Route Handlers",
+      "laravel": "Laravel API",
+      "cookie": "httpOnly cookie",
+      "token": "Sanctum token",
+      "noToken": "The token never reaches browser JavaScript",
+      "client": "Client"
+    },
+    "grao-co": {
+      "title": "Grão & Co.",
+      "tagline": "A specialty-coffee store, built end to end: Laravel API, Next.js BFF and 196 automated tests.",
+      "role": "Solo full-stack — design, front-end, API and tests",
+      "timeline": "Aug 2026 · 2 days · 6 pull requests"
+    },
+    "caseStudy": "Case study",
+    "talk": "Like what you see? Let's talk."
+  },
   "NotFound": {
     "title": "Nothing here",
     "body": "This page doesn't exist — or it moved while you weren't looking.",

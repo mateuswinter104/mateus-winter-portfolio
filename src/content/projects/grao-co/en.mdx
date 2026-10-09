@@ -1,0 +1,64 @@
+## Overview
+
+Grão & Co. is a specialty-coffee store I built end to end over two days in August 2026: a **Laravel 13** API with Sanctum auth, and a **Next.js 16** storefront that talks to it through a backend-for-frontend. Six pull requests, one per feature — theme, tests, landing page, auth, shop and the rebrand from "Café Commerce" to Grão & Co.
+
+The goal wasn't a template store. It was to practice the decisions a real product forces on you: where the token lives, what happens when the API is down, how filters behave with the back button — and how to prove all of it with tests.
+
+## Architecture
+
+<ArchitectureDiagram />
+
+The browser never talks to Laravel. It calls Next.js Route Handlers, which call the API server to server and keep the Sanctum token in an **httpOnly cookie**. Server Components read that cookie to load the current user. No CORS, no token in `localStorage`, nothing for an XSS to steal.
+
+## Key decisions
+
+### The URL is the single source of truth for filters
+
+Category, roast, process, origin, stock, sort and page all live in the query string. Every filter is a plain link, so the catalog stays a Server Component with zero client state: the back button undoes one filter at a time, every combination is shareable, and it works without JavaScript. Changing a filter resets pagination, and server defaults stay out of the URL.
+
+### A rate limiter that understands the architecture
+
+Laravel's default login throttle counts by IP. Behind a BFF, every login arrives from the same Next.js server — six wrong passwords from one person would lock the whole store. The limiter is keyed by **e-mail plus IP**, with a test proving that one locked account doesn't block anyone else.
+
+### Security details that are easy to miss
+
+- `role` isn't mass-assignable, and a test proves registration can't promote itself to admin.
+- Unknown e-mail and wrong password return the same message, so accounts can't be enumerated.
+- Logout revokes only the current token, and the account page is protected on the server, not in the client.
+
+### A theme without a flash
+
+An inline script applies the saved or system theme before the first paint. The sun/moon icon is switched by CSS instead of state, so the server and client HTML always match.
+
+### Failing gracefully
+
+If the API goes down, the header falls back to no categories, the session resolves to "visitor" and pages show a notice instead of crashing.
+
+## Design
+
+Warm black and gold, **Fraunces** for headings and **Source Sans 3** for text. The products have no photos: each roast gets its own gradient, from pale amber to almost-black espresso. The hero is a "crema orb" made only with CSS — rotating blurred conic gradients, a morphing swirl, a highlight and a rim. No image, no canvas.
+
+Accessibility came along: accordions, filter groups and the sort menu are `<details>` elements that work without JavaScript, focus is always visible, and `prefers-reduced-motion` turns the animations off.
+
+## Quality
+
+<Stats slug="grao-co" />
+
+The Playwright suite runs against a Node mock of the Laravel API, so the end-to-end tests need no PHP or database. The tests paid for themselves:
+
+- The E2E suite caught a stale header after login: `router.refresh()` ran before `push()`.
+- Lightning CSS was silently dropping the unprefixed `backdrop-filter`, so the glass effect never rendered.
+- `backdrop-filter` trapped the fixed mobile drawer inside the navbar — fixed with a portal.
+- Origins like "Franca, SP" contain a comma, so commas can never be filter separators.
+
+## How I worked
+
+One branch per feature, six pull requests and commit messages that explain the why. I paired with **Claude Code** the whole way. My job was to frame each problem, set the constraints, review every diff and make the calls. The bugs above are exactly what review and tests are for — none of them would have been caught by "it compiles".
+
+## Why the live demo runs in memory
+
+The public demo runs on Vercel without the Laravel API. A `DEMO_MODE` flag swaps the HTTP client for an in-process handler that mirrors the API contract and the seed data: same shapes, same errors, same messages. The real API — and its PHPUnit suite — lives in `apps/api`.
+
+## What's next
+
+Cart and checkout, order history and CI on GitHub Actions running all three test suites.

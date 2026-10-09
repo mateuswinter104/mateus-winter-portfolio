@@ -1,0 +1,64 @@
+## Visão geral
+
+O Grão & Co. é uma loja de cafés especiais que construí de ponta a ponta em dois dias, em agosto de 2026: uma API em **Laravel 13** com autenticação Sanctum e uma vitrine em **Next.js 16** que conversa com ela por um backend-for-frontend. Seis pull requests, um por feature — tema, testes, landing page, autenticação, loja e o rebrand de "Café Commerce" para Grão & Co.
+
+A ideia não era fazer uma loja de template. Era praticar as decisões que um produto de verdade exige: onde o token mora, o que acontece quando a API cai, como os filtros se comportam com o botão voltar — e como provar tudo isso com testes.
+
+## Arquitetura
+
+<ArchitectureDiagram />
+
+O navegador nunca fala com o Laravel. Ele chama Route Handlers do Next.js, que chamam a API de servidor para servidor e guardam o token do Sanctum num **cookie httpOnly**. Os Server Components leem esse cookie para carregar o usuário. Sem CORS, sem token no `localStorage`, nada para um XSS roubar.
+
+## Decisões técnicas
+
+### A URL é a fonte da verdade dos filtros
+
+Categoria, torra, processo, origem, estoque, ordenação e página moram na query string. Cada filtro é um link comum, então o catálogo continua sendo um Server Component sem estado no cliente: o botão voltar desfaz um filtro por vez, toda combinação pode ser compartilhada e tudo funciona sem JavaScript. Mudar um filtro volta para a página 1, e os padrões do servidor ficam fora da URL.
+
+### Um rate limit que entende a arquitetura
+
+O throttle padrão de login do Laravel conta por IP. Atrás de um BFF, todo login chega do mesmo servidor Next.js — seis senhas erradas de uma pessoa trancariam a loja inteira. O limite usa **e-mail mais IP** como chave, com um teste provando que uma conta bloqueada não bloqueia mais ninguém.
+
+### Detalhes de segurança fáceis de esquecer
+
+- `role` não é atribuível em massa, e um teste prova que o cadastro não consegue se promover a admin.
+- E-mail desconhecido e senha errada devolvem a mesma mensagem, então não dá para descobrir quais contas existem.
+- O logout revoga só o token atual, e a página da conta é protegida no servidor, não no cliente.
+
+### Tema sem piscar
+
+Um script inline aplica o tema salvo ou o do sistema antes da primeira pintura. O ícone de sol e lua troca por CSS, não por estado, então o HTML do servidor e o do cliente sempre batem.
+
+### Falhar com elegância
+
+Se a API cai, o header fica sem categorias, a sessão vira "visitante" e as páginas mostram um aviso em vez de quebrar.
+
+## Design
+
+Preto quente e dourado, **Fraunces** nos títulos e **Source Sans 3** no texto. Os produtos não têm fotos: cada torra ganha o seu degradê, do âmbar claro ao expresso quase preto. O hero é um "crema orb" feito só com CSS — gradientes cônicos desfocados girando, um redemoinho que muda de forma, um brilho e uma borda. Sem imagem, sem canvas.
+
+A acessibilidade veio junto: acordeões, grupos de filtro e o menu de ordenação são elementos `<details>` que funcionam sem JavaScript, o foco está sempre visível e `prefers-reduced-motion` desliga as animações.
+
+## Qualidade
+
+<Stats slug="grao-co" />
+
+A suíte do Playwright roda contra um mock em Node da API Laravel, então os testes de ponta a ponta não precisam de PHP nem de banco. Os testes se pagaram:
+
+- O E2E pegou um header desatualizado depois do login: o `router.refresh()` rodava antes do `push()`.
+- O Lightning CSS descartava em silêncio o `backdrop-filter` sem prefixo, e o efeito de vidro nunca aparecia.
+- O `backdrop-filter` prendia o drawer mobile, que é `fixed`, dentro do navbar — resolvido com um portal.
+- Origens como "Franca, SP" têm vírgula, então a vírgula nunca pode separar filtros.
+
+## Como trabalhei
+
+Uma branch por feature, seis pull requests e mensagens de commit que explicam o porquê. Trabalhei em par com o **Claude Code** o tempo todo. O meu papel foi enquadrar cada problema, definir as restrições, revisar cada diff e tomar as decisões. Os bugs acima são exatamente o que revisão e testes existem para pegar — nenhum deles seria pego por "compila".
+
+## Por que o demo roda em memória
+
+O demo público roda na Vercel sem a API Laravel. Uma flag `DEMO_MODE` troca o cliente HTTP por um handler em processo que espelha o contrato da API e os dados do seed: mesmos formatos, mesmos erros, mesmas mensagens. A API de verdade — e a suíte PHPUnit dela — fica em `apps/api`.
+
+## Próximos passos
+
+Carrinho e checkout, histórico de pedidos e CI no GitHub Actions rodando as três suítes de teste.

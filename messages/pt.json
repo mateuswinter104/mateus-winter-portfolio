@@ -219,6 +219,41 @@
     "backToTop": "Voltar ao topo",
     "rights": "©2026 Mateus Winter"
   },
+  "Project": {
+    "back": "Voltar ao início",
+    "role": "Papel",
+    "timeline": "Período",
+    "stack": "Stack",
+    "links": "Links",
+    "gallery": "Telas",
+    "galleryHint": "Role para ver as telas",
+    "next": "Próximo",
+    "contents": "Conteúdo",
+    "stats": {
+      "jest": "testes Jest",
+      "playwright": "testes Playwright",
+      "phpunit": "testes PHPUnit"
+    },
+    "diagram": {
+      "title": "Fluxo de uma requisição",
+      "browser": "Navegador",
+      "next": "Servidor Next.js",
+      "routes": "Route Handlers",
+      "laravel": "API Laravel",
+      "cookie": "Cookie httpOnly",
+      "token": "Token Sanctum",
+      "noToken": "O token nunca chega ao JavaScript do navegador",
+      "client": "Cliente"
+    },
+    "grao-co": {
+      "title": "Grão & Co.",
+      "tagline": "Uma loja de cafés especiais feita de ponta a ponta: API em Laravel, BFF em Next.js e 196 testes automatizados.",
+      "role": "Full-stack solo — design, front-end, API e testes",
+      "timeline": "Ago 2026 · 2 dias · 6 pull requests"
+    },
+    "caseStudy": "Estudo de caso",
+    "talk": "Gostou do que viu? Vamos conversar."
+  },
   "NotFound": {
     "title": "Nada por aqui",
     "body": "Esta página não existe — ou mudou de lugar enquanto você não olhava.",
