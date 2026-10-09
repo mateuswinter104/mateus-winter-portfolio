@@ -127,6 +127,47 @@
     ],
     "codeCaption": "Login throttling keyed by e-mail — every request reaches Laravel from the same Next.js server IP."
   },
+  "Experience": {
+    "label": "Experience",
+    "title": "Where I've been building",
+    "present": "Present",
+    "remote": "Remote",
+    "noImages": "Client projects are confidential, so they're described here without screenshots.",
+    "items": {
+      "codescript": {
+        "role": "Software Analyst",
+        "summary": "Full-stack work on SaaS products for logistics, agribusiness and government — from idea to production, with Claude Code as my daily pair."
+      },
+      "myfleet": {
+        "role": "MyFleet — fleet tracking & telematics",
+        "summary": "Dashboards, real-time maps, trip history, telemetry charts and reports shipped to 5 white-label platforms. React Native manager and driver apps with push notifications. Laravel and PostgreSQL on the back-end since 2026."
+      },
+      "ai": {
+        "role": "AI-assisted engineering",
+        "summary": "Claude Code is part of my daily workflow on MyFleet: I plan each task with it, carry one change across 5 white-label fronts, 2 mobile apps and the Laravel API, and review every diff before it becomes a PR. I also build tooling on top of it — a skill that ships the weekly test builds to TestFlight and Firebase, the sprint backlog read from Notion over MCP, hooks, and a project memory of lessons learned."
+      },
+      "govtech": {
+        "role": "GovTech Place — admin platform",
+        "summary": "Top contributor to the admin panel of a gov-tech startup platform: registration flows for startups and organizations, document viewing and PDF generation, protected authentication."
+      },
+      "ifdc": {
+        "role": "IFDC — fertilizer formulas",
+        "summary": "Rebuilt the fertilizer formula management interface in React and TypeScript."
+      },
+      "design": {
+        "role": "Stara, Michigan & Rota System",
+        "summary": "UX for an operator portal, a Figma design system for a brake lifecycle monitoring app, and the front-end of a logistics platform."
+      },
+      "orni": {
+        "role": "Web Developer",
+        "summary": "WordPress websites built with HTML, CSS and JavaScript."
+      },
+      "qi": {
+        "role": "Computer Technician",
+        "summary": "Technical degree in computing."
+      }
+    }
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",

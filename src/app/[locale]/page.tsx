@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { About } from "@/components/home/about";
+import { Experience } from "@/components/home/experience";
 import { Hero } from "@/components/home/hero";
 import { Process } from "@/components/home/process";
 import { SelectedWork } from "@/components/home/selected-work";
@@ -19,6 +20,7 @@ export default async function HomePage() {
       <SelectedWork />
       <Process />
       <Services />
+      <Experience />
     </>
   );
 }

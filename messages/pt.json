@@ -127,6 +127,47 @@
     ],
     "codeCaption": "Limite de login por e-mail — toda requisição chega ao Laravel pelo mesmo IP do servidor Next.js."
   },
+  "Experience": {
+    "label": "Experiência",
+    "title": "Onde tenho construído",
+    "present": "Atual",
+    "remote": "Remoto",
+    "noImages": "Os projetos de clientes são confidenciais, por isso aparecem aqui sem telas.",
+    "items": {
+      "codescript": {
+        "role": "Analista de Software",
+        "summary": "Trabalho full-stack em produtos SaaS de logística, agronegócio e governo — da ideia à produção, com o Claude Code como par no dia a dia."
+      },
+      "myfleet": {
+        "role": "MyFleet — rastreamento e telemetria de frotas",
+        "summary": "Dashboards, mapas em tempo real, histórico de viagens, gráficos de telemetria e relatórios em 5 plataformas white-label. Apps gestor e condutor em React Native com push notifications. Laravel e PostgreSQL no back-end desde 2026."
+      },
+      "ai": {
+        "role": "Engenharia com IA",
+        "summary": "O Claude Code faz parte do meu dia a dia no MyFleet: planejo cada task com ele, levo uma mesma mudança aos 5 fronts white-label, aos 2 apps e à API Laravel, e reviso cada diff antes de virar PR. Também construo ferramentas em cima dele: uma skill que publica os builds semanais de teste no TestFlight e no Firebase, o backlog da sprint lido do Notion via MCP, hooks e uma memória de projeto com as lições aprendidas."
+      },
+      "govtech": {
+        "role": "GovTech Place — plataforma administrativa",
+        "summary": "Principal contribuidor do painel administrativo de uma plataforma de startups gov-tech: fluxos de cadastro de startups e organizações, visualização de documentos e geração de PDFs, autenticação protegida."
+      },
+      "ifdc": {
+        "role": "IFDC — fórmulas de fertilizantes",
+        "summary": "Reconstruí a interface de gestão de fórmulas de fertilizantes em React e TypeScript."
+      },
+      "design": {
+        "role": "Stara, Michigan e Rota System",
+        "summary": "UX de um portal do operador, um design system no Figma para um app de monitoramento do ciclo de vida de freios e o front-end de uma plataforma de logística."
+      },
+      "orni": {
+        "role": "Desenvolvedor Web",
+        "summary": "Sites em WordPress feitos com HTML, CSS e JavaScript."
+      },
+      "qi": {
+        "role": "Técnico em Informática",
+        "summary": "Curso técnico em informática."
+      }
+    }
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",
