@@ -78,6 +78,55 @@
       }
     }
   },
+  "Process": {
+    "label": "Como trabalho",
+    "title": "Da ideia à produção",
+    "steps": [
+      {
+        "title": "Plan",
+        "kicker": "Problema primeiro",
+        "body": "Começo pelo problema, não pela ferramenta: os fluxos, os casos de borda e os estados difíceis — vazio, carregando, erro. Com um Figma, um design system ou só uma task, sei o que vou construir antes de escrever uma linha de código."
+      },
+      {
+        "title": "Build",
+        "kicker": "Tipado de ponta a ponta",
+        "body": "TypeScript, Next.js e React Native no front, Laravel no back. Uma branch por feature, pull requests pequenos e commits legíveis."
+      },
+      {
+        "title": "Test",
+        "kicker": "Uma rede de segurança de verdade",
+        "body": "Jest e Testing Library nas unidades, Playwright nos fluxos reais, PHPUnit na API. Quando aparece um bug, o teste vem junto com a correção."
+      },
+      {
+        "title": "Ship",
+        "kicker": "Revisado e publicado",
+        "body": "Todo diff revisado — o meu e o da IA — e depois publicado: Vercel na web, TestFlight e Firebase no mobile."
+      }
+    ]
+  },
+  "Services": {
+    "label": "O que eu faço",
+    "title": "O que eu faço",
+    "items": [
+      {
+        "title": "Front-end",
+        "body": "Apps em Next.js, dashboards, mapas em tempo real com Mapbox, gráficos e relatórios — rápidos, acessíveis e testados."
+      },
+      {
+        "title": "Mobile",
+        "body": "Apps em React Native e Expo com mapas, push notifications no iOS e no Android e publicação via TestFlight e Firebase."
+      },
+      {
+        "title": "Back-end",
+        "body": "APIs em Laravel e PostgreSQL: autenticação com Sanctum, validação, rate limit que entende a arquitetura e testes de feature."
+      },
+      {
+        "title": "UI/UX",
+        "body": "Olho para interface: implemento o design com fidelidade e questiono o que atrapalha a usabilidade — e, quando não há designer, consigo mapear os fluxos e desenhar as telas eu mesmo."
+      }
+    ],
+    "codeCaption": "Limite de login por e-mail — toda requisição chega ao Laravel pelo mesmo IP do servidor Next.js."
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",

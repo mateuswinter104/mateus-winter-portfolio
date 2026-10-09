@@ -78,6 +78,55 @@
       }
     }
   },
+  "Process": {
+    "label": "How I work",
+    "title": "From idea to production",
+    "steps": [
+      {
+        "title": "Plan",
+        "kicker": "Problem first",
+        "body": "I start from the problem, not the tool: the flows, the edge cases and the hard states — empty, loading, error. With a Figma file, a design system or just a ticket, I know what I'm building before I write a line of code."
+      },
+      {
+        "title": "Build",
+        "kicker": "Typed end to end",
+        "body": "TypeScript, Next.js and React Native on the front, Laravel on the back. One branch per feature, small pull requests, readable commits."
+      },
+      {
+        "title": "Test",
+        "kicker": "A real safety net",
+        "body": "Jest and Testing Library for units, Playwright for real user flows, PHPUnit on the API. When a bug shows up, a test comes with the fix."
+      },
+      {
+        "title": "Ship",
+        "kicker": "Reviewed and released",
+        "body": "Every diff reviewed — mine and the AI's — then deployed: Vercel for the web, TestFlight and Firebase for mobile."
+      }
+    ]
+  },
+  "Services": {
+    "label": "What I do",
+    "title": "What I do",
+    "items": [
+      {
+        "title": "Front-end",
+        "body": "Next.js apps, dashboards, real-time maps with Mapbox, charts and reports — fast, accessible and tested."
+      },
+      {
+        "title": "Mobile",
+        "body": "React Native and Expo apps with maps, push notifications on iOS and Android, and releases through TestFlight and Firebase."
+      },
+      {
+        "title": "Back-end",
+        "body": "Laravel and PostgreSQL APIs: Sanctum auth, validation, rate limiting that understands the architecture, and feature tests."
+      },
+      {
+        "title": "UI/UX",
+        "body": "An eye for interfaces: I implement designs faithfully and question what hurts usability — and when there's no designer, I can map the flows and design the screens myself."
+      }
+    ],
+    "codeCaption": "Login throttling keyed by e-mail — every request reaches Laravel from the same Next.js server IP."
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",
