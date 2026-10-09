@@ -8,10 +8,15 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
 import { site } from "@/content/site";
+import { introScript } from "@/hooks/use-intro";
 import { Providers } from "@/components/providers";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
+import { ScrollReset } from "@/components/layout/scroll-reset";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
+import { Preloader } from "@/components/motion/preloader";
+import { Cursor } from "@/components/motion/cursor";
 import { Toaster } from "@/components/ui/sonner";
 import "../globals.css";
 
@@ -66,6 +71,8 @@ export const viewport: Viewport = {
   ],
 };
 
+const noscriptStyles = "[data-reveal]{transform:none!important;opacity:1!important}";
+
 export default async function LocaleLayout({ children }: LayoutProps<"/[locale]">) {
   const locale = await rootLocale();
 
@@ -81,6 +88,12 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: introScript }} />
+        <noscript>
+          <style>{noscriptStyles}</style>
+        </noscript>
+      </head>
       <body className="min-h-svh">
         <NextIntlClientProvider>
           <Providers>
@@ -90,6 +103,10 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
             >
               {t("skip")}
             </a>
+            <SmoothScroll />
+            <ScrollReset />
+            <Preloader />
+            <Cursor />
             <ScrollProgress />
             <Header />
             <main id="content">{children}</main>

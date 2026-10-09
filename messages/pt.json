@@ -21,6 +21,10 @@
     "themeLight": "Claro",
     "themeDark": "Escuro"
   },
+  "Intro": {
+    "label": "Portfólio ©2026",
+    "loading": "Carregando"
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",

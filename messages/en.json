@@ -21,6 +21,10 @@
     "themeLight": "Light",
     "themeDark": "Dark"
   },
+  "Intro": {
+    "label": "Portfolio ©2026",
+    "loading": "Loading"
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",
