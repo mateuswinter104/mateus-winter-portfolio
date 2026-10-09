@@ -63,6 +63,21 @@
     "label": "Ferramentas",
     "title": "Com o que eu entrego"
   },
+  "Work": {
+    "label": "Projetos",
+    "title": "Projetos selecionados",
+    "viewCase": "Ver case",
+    "liveDemo": "Ver demo",
+    "code": "Código-fonte",
+    "more": "Mais cases a caminho.",
+    "projects": {
+      "grao-co": {
+        "category": "E-commerce · Full-stack",
+        "summary": "Uma loja de cafés especiais com API em Laravel, backend-for-frontend em Next.js e 196 testes automatizados.",
+        "imageAlt": "Telas da loja Grão & Co."
+      }
+    }
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",
@@ -88,5 +103,16 @@
     "title": "Nada por aqui",
     "body": "Esta página não existe — ou mudou de lugar enquanto você não olhava.",
     "cta": "Voltar ao início"
+  },
+  "Shots": {
+    "home": "Início",
+    "catalog": "Catálogo",
+    "product": "Produto",
+    "light": "Tema claro",
+    "login": "Login",
+    "account": "Conta",
+    "mobileHome": "Início no celular",
+    "mobileCatalog": "Catálogo no celular",
+    "mobileMenu": "Menu no celular"
   }
 }

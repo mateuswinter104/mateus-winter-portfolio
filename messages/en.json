@@ -63,6 +63,21 @@
     "label": "Toolbox",
     "title": "Tools I ship with"
   },
+  "Work": {
+    "label": "Selected work",
+    "title": "Selected work",
+    "viewCase": "View case",
+    "liveDemo": "Live demo",
+    "code": "Source code",
+    "more": "More case studies are on the way.",
+    "projects": {
+      "grao-co": {
+        "category": "E-commerce · Full-stack",
+        "summary": "A specialty-coffee store with a Laravel API, a Next.js backend-for-frontend and 196 automated tests.",
+        "imageAlt": "Grão & Co. store screens"
+      }
+    }
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",
@@ -88,5 +103,16 @@
     "title": "Nothing here",
     "body": "This page doesn't exist — or it moved while you weren't looking.",
     "cta": "Back to home"
+  },
+  "Shots": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "product": "Product",
+    "light": "Light theme",
+    "login": "Sign in",
+    "account": "Account",
+    "mobileHome": "Mobile home",
+    "mobileCatalog": "Mobile catalog",
+    "mobileMenu": "Mobile menu"
   }
 }
