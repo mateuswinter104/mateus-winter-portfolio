@@ -37,6 +37,32 @@
     "scroll": "Role",
     "social": "Redes"
   },
+  "Marquee": {
+    "label": "Destaques",
+    "items": [
+      "Full-stack",
+      "UI/UX",
+      "Engenharia com IA",
+      "Testado com Jest e Playwright"
+    ]
+  },
+  "About": {
+    "label": "Sobre mim",
+    "lead": "Sou o Mateus, um desenvolvedor full-stack & UI/UX Designer. Há mais de cinco anos transformando produtos complexos em interfaces descomplicadas.",
+    "body": "Comecei criando sites, passei para front-end e UI/UX e hoje trabalho na stack inteira: React e Next.js, React Native e Expo, Laravel e PostgreSQL. Cuido dos detalhes que o usuário percebe — e dos que ele nunca deveria perceber: estados de carregamento, acessibilidade, um mapa que não engasga.",
+    "ai": "Com o Claude Code no dia a dia, meu trabalho virou mais engenharia e menos digitação: desenho a arquitetura, antecipo os edge cases, reviso cada diff e valido tudo com testes.",
+    "photoAlt": "Retrato de Mateus Winter sorrindo, de óculos e terno escuro",
+    "stats": {
+      "years": "anos construindo produtos",
+      "projects": "projetos desde 2021",
+      "apps": "apps mobile",
+      "commits": "commits em 2026"
+    }
+  },
+  "Stack": {
+    "label": "Ferramentas",
+    "title": "Com o que eu entrego"
+  },
   "Contact": {
     "label": "Contato",
     "title": "Vamos conversar",

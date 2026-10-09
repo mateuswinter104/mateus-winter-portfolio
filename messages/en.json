@@ -37,6 +37,32 @@
     "scroll": "Scroll",
     "social": "Social"
   },
+  "Marquee": {
+    "label": "Highlights",
+    "items": [
+      "Full-stack",
+      "UI/UX",
+      "AI-assisted engineering",
+      "Tested with Jest & Playwright"
+    ]
+  },
+  "About": {
+    "label": "About me",
+    "lead": "I'm Mateus, a full-stack developer & UI/UX designer. For over five years, I've been turning complex products into uncomplicated interfaces.",
+    "body": "I started out building websites, moved into front-end and UI/UX, and today I work across the whole stack: React and Next.js, React Native and Expo, Laravel and PostgreSQL. I care about the details users notice — and the ones they never should: loading states, accessibility, a map that doesn't stutter.",
+    "ai": "With Claude Code in my daily work, my job has become more engineering and less typing: I design the architecture, anticipate the edge cases, review every diff and validate everything with tests.",
+    "photoAlt": "Portrait of Mateus Winter smiling, wearing glasses and a dark suit",
+    "stats": {
+      "years": "years building products",
+      "projects": "projects since 2021",
+      "apps": "mobile apps",
+      "commits": "commits in 2026"
+    }
+  },
+  "Stack": {
+    "label": "Toolbox",
+    "title": "Tools I ship with"
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",
