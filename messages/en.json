@@ -168,6 +168,36 @@
       }
     }
   },
+  "Faq": {
+    "label": "FAQ",
+    "title": "Quick answers to common questions",
+    "items": [
+      {
+        "q": "How do you use AI in your work?",
+        "a": "Every day, with Claude Code — as a pair, not an autopilot. I frame the problem and the constraints, review every diff and keep the tests as the source of truth. Grão & Co. was built this way, and its history shows it."
+      },
+      {
+        "q": "How's your English?",
+        "a": "Upper-intermediate (B2). I read and write technical English every day — docs, pull requests, issues — and I'm comfortable in meetings."
+      },
+      {
+        "q": "Which stack do you prefer?",
+        "a": "TypeScript with React and Next.js on the web, React Native for mobile, Laravel or Node on the back-end. I care more about the product than the tool, and I pick up new stacks fast."
+      },
+      {
+        "q": "What's your time zone?",
+        "a": "Brasília time (UTC−3). That means an almost full overlap with US East Coast teams and a comfortable afternoon overlap with Europe."
+      },
+      {
+        "q": "How do you ensure quality?",
+        "a": "Tests are part of the delivery: Jest and Testing Library for units, Playwright for real user flows and PHPUnit on the API. When a bug shows up, the fix comes with the test that catches it, and every change goes out in a small, reviewed pull request."
+      },
+      {
+        "q": "Have you worked with international clients?",
+        "a": "Yes. At Code Script I worked for IFDC, the International Fertilizer Development Center, an international organization based in the US: I rebuilt their fertilizer formula management system in React and TypeScript, talking directly with their team in English."
+      }
+    ]
+  },
   "Contact": {
     "label": "Contact",
     "title": "Let's talk",
