@@ -1,0 +1,29 @@
+{
+  "Meta": {
+    "title": "Mateus Winter — Full-stack Developer",
+    "description": "Full-stack developer with a front-end and UI/UX focus. I build web and mobile products in React, Next.js, React Native and Laravel — tested end to end.",
+    "ogTagline": "Full-stack Developer · Front-end & UI/UX"
+  },
+  "Nav": {
+    "work": "Work",
+    "about": "About",
+    "experience": "Experience",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content",
+    "home": "Home",
+    "primary": "Primary",
+    "language": "Language",
+    "switchTo": "Switch to {language}",
+    "themeToggle": "Toggle theme",
+    "themeLight": "Light",
+    "themeDark": "Dark"
+  },
+  "NotFound": {
+    "title": "Nothing here",
+    "body": "This page doesn't exist — or it moved while you weren't looking.",
+    "cta": "Back to home"
+  }
+}
