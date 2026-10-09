@@ -21,6 +21,27 @@
     "themeLight": "Light",
     "themeDark": "Dark"
   },
+  "Contact": {
+    "label": "Contact",
+    "title": "Let's talk",
+    "body": "Have a role or a project in mind? I usually reply within a day.",
+    "copy": "Copy e-mail",
+    "copied": "E-mail copied to the clipboard",
+    "copyFailed": "Couldn't copy — the address is {email}",
+    "cv": "Résumé",
+    "cvEn": "CV · English",
+    "cvPt": "CV · Português",
+    "sayHi": "Say hi"
+  },
+  "Footer": {
+    "navigation": "Navigation",
+    "social": "Elsewhere",
+    "resources": "Resources",
+    "localTime": "Local time · Rio Grande do Sul, BR",
+    "built": "Designed and built by Mateus Winter.",
+    "backToTop": "Back to top",
+    "rights": "©2026 Mateus Winter"
+  },
   "NotFound": {
     "title": "Nothing here",
     "body": "This page doesn't exist — or it moved while you weren't looking.",

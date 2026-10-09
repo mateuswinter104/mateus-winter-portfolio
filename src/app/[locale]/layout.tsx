@@ -9,6 +9,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
 import { site } from "@/content/site";
 import { Providers } from "@/components/providers";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { Toaster } from "@/components/ui/sonner";
 import "../globals.css";
 
@@ -87,7 +90,10 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
             >
               {t("skip")}
             </a>
+            <ScrollProgress />
+            <Header />
             <main id="content">{children}</main>
+            <Footer />
             <div aria-hidden className="grain" />
             <Toaster position="bottom-center" />
           </Providers>

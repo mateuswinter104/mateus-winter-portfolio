@@ -21,6 +21,27 @@
     "themeLight": "Claro",
     "themeDark": "Escuro"
   },
+  "Contact": {
+    "label": "Contato",
+    "title": "Vamos conversar",
+    "body": "Tem uma vaga ou um projeto em mente? Costumo responder em até um dia.",
+    "copy": "Copiar e-mail",
+    "copied": "E-mail copiado",
+    "copyFailed": "Não consegui copiar — o endereço é {email}",
+    "cv": "Currículo",
+    "cvEn": "CV · English",
+    "cvPt": "CV · Português",
+    "sayHi": "Diga oi"
+  },
+  "Footer": {
+    "navigation": "Navegação",
+    "social": "Redes",
+    "resources": "Arquivos",
+    "localTime": "Horário local · Rio Grande do Sul, BR",
+    "built": "Desenhado e desenvolvido por Mateus Winter.",
+    "backToTop": "Voltar ao topo",
+    "rights": "©2026 Mateus Winter"
+  },
   "NotFound": {
     "title": "Nada por aqui",
     "body": "Esta página não existe — ou mudou de lugar enquanto você não olhava.",
