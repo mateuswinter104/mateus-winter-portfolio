@@ -100,7 +100,7 @@
       {
         "title": "Ship",
         "kicker": "Reviewed and released",
-        "body": "Every diff reviewed — mine and the AI's — then deployed: Vercel for the web, TestFlight and Firebase for mobile."
+        "body": "Every diff reviewed — mine and the AI's — then released: Vercel for the web, the App Store and Google Play for mobile."
       }
     ]
   },
@@ -114,7 +114,7 @@
       },
       {
         "title": "Mobile",
-        "body": "React Native and Expo apps with maps, push notifications on iOS and Android, and releases through TestFlight and Firebase."
+        "body": "React Native and Expo apps with maps, push notifications on iOS and Android, test builds through TestFlight and Firebase, and releases on the App Store and Google Play."
       },
       {
         "title": "Back-end",
@@ -144,7 +144,7 @@
       },
       "ai": {
         "role": "AI-assisted engineering",
-        "summary": "Claude Code is part of my daily workflow on MyFleet: I plan each task with it, carry one change across 5 white-label fronts, 2 mobile apps and the Laravel API, and review every diff before it becomes a PR. I also build tooling on top of it — a skill that ships the weekly test builds to TestFlight and Firebase, the sprint backlog read from Notion over MCP, hooks, and a project memory of lessons learned."
+        "summary": "Claude Code is part of my daily workflow on MyFleet: I plan each task with it, carry one change across 5 white-label fronts, 2 mobile apps and the Laravel API, and review every diff before it becomes a PR. I also build tooling on top of it — a skill that sends the weekly test builds to testers through TestFlight and Firebase, the sprint backlog read from Notion over MCP, hooks, and a project memory of lessons learned."
       },
       "govtech": {
         "role": "GovTech Place — admin platform",

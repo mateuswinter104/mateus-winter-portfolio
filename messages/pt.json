@@ -100,7 +100,7 @@
       {
         "title": "Ship",
         "kicker": "Revisado e publicado",
-        "body": "Todo diff revisado — o meu e o da IA — e depois publicado: Vercel na web, TestFlight e Firebase no mobile."
+        "body": "Todo diff revisado — o meu e o da IA — e depois publicado: Vercel na web, App Store e Google Play no mobile."
       }
     ]
   },
@@ -114,7 +114,7 @@
       },
       {
         "title": "Mobile",
-        "body": "Apps em React Native e Expo com mapas, push notifications no iOS e no Android e publicação via TestFlight e Firebase."
+        "body": "Apps em React Native e Expo com mapas, push notifications no iOS e no Android, builds de teste via TestFlight e Firebase e publicação na App Store e no Google Play."
       },
       {
         "title": "Back-end",
@@ -144,7 +144,7 @@
       },
       "ai": {
         "role": "Engenharia com IA",
-        "summary": "O Claude Code faz parte do meu dia a dia no MyFleet: planejo cada task com ele, levo uma mesma mudança aos 5 fronts white-label, aos 2 apps e à API Laravel, e reviso cada diff antes de virar PR. Também construo ferramentas em cima dele: uma skill que publica os builds semanais de teste no TestFlight e no Firebase, o backlog da sprint lido do Notion via MCP, hooks e uma memória de projeto com as lições aprendidas."
+        "summary": "O Claude Code faz parte do meu dia a dia no MyFleet: planejo cada task com ele, levo uma mesma mudança aos 5 fronts white-label, aos 2 apps e à API Laravel, e reviso cada diff antes de virar PR. Também construo ferramentas em cima dele: uma skill que envia os builds semanais de teste aos testers pelo TestFlight e pelo Firebase, o backlog da sprint lido do Notion via MCP, hooks e uma memória de projeto com as lições aprendidas."
       },
       "govtech": {
         "role": "GovTech Place — plataforma administrativa",
