@@ -57,6 +57,17 @@ test.describe("pointer effects", () => {
     await expect(page.getByTestId("custom-cursor-label")).toHaveText("View case");
   });
 
+  test("blends the cursor dot with the page so it stays visible on light and dark surfaces", async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== "desktop");
+    await page.goto("/en");
+    await page.mouse.move(400, 400);
+    const dot = page.getByTestId("custom-cursor-dot");
+    await expect(dot).toHaveCSS("mix-blend-mode", "difference");
+    await expect(dot).toHaveCSS("position", "fixed");
+    await expect(page.getByTestId("custom-cursor")).toHaveCSS("position", "static");
+    await expect(page.getByTestId("custom-cursor")).toHaveCSS("z-index", "auto");
+  });
+
   test("leaves touch screens with the native experience", async ({ page, isMobile }) => {
     test.skip(!isMobile);
     await page.goto("/en");

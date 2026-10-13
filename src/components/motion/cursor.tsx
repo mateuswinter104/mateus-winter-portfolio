@@ -71,8 +71,8 @@ function CursorFollower() {
   }, [x, y]);
 
   return (
-    <div aria-hidden data-testid="custom-cursor" data-mode={mode} className="pointer-events-none fixed inset-0 z-[95]">
-      <div className="absolute inset-0 mix-blend-difference">
+    <div aria-hidden data-testid="custom-cursor" data-mode={mode}>
+      <div data-testid="custom-cursor-dot" className="pointer-events-none fixed inset-0 z-[95] mix-blend-difference">
         <motion.span
           className="absolute top-0 left-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white"
           style={{ x, y }}
@@ -83,22 +83,24 @@ function CursorFollower() {
           transition={{ type: "spring", stiffness: 500, damping: 32 }}
         />
       </div>
-      <AnimatePresence>
-        {mode === "label" ? (
-          <motion.span
-            key="label"
-            data-testid="custom-cursor-label"
-            className="absolute top-0 left-0 flex size-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-foreground p-3 text-center font-mono text-[0.625rem] leading-tight tracking-[0.14em] text-background uppercase"
-            style={{ x: labelX, y: labelY }}
-            initial={{ scale: 0.2, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.2, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 320, damping: 24 }}
-          >
-            {label}
-          </motion.span>
-        ) : null}
-      </AnimatePresence>
+      <div className="pointer-events-none fixed inset-0 z-[95]">
+        <AnimatePresence>
+          {mode === "label" ? (
+            <motion.span
+              key="label"
+              data-testid="custom-cursor-label"
+              className="absolute top-0 left-0 flex size-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-foreground p-3 text-center font-mono text-[0.625rem] leading-tight tracking-[0.14em] text-background uppercase"
+              style={{ x: labelX, y: labelY }}
+              initial={{ scale: 0.2, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.2, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 320, damping: 24 }}
+            >
+              {label}
+            </motion.span>
+          ) : null}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
