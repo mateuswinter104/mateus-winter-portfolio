@@ -104,29 +104,6 @@
       }
     ]
   },
-  "Services": {
-    "label": "What I do",
-    "title": "What I do",
-    "items": [
-      {
-        "title": "Front-end",
-        "body": "Next.js apps, dashboards, real-time maps with Mapbox, charts and reports — fast, accessible and tested."
-      },
-      {
-        "title": "Mobile",
-        "body": "React Native and Expo apps with maps, push notifications on iOS and Android, test builds through TestFlight and Firebase, and releases on the App Store and Google Play."
-      },
-      {
-        "title": "Back-end",
-        "body": "Laravel and PostgreSQL APIs: Sanctum auth, validation, rate limiting that understands the architecture, and feature tests."
-      },
-      {
-        "title": "UI/UX",
-        "body": "An eye for interfaces: I implement designs faithfully and question what hurts usability — and when there's no designer, I can map the flows and design the screens myself."
-      }
-    ],
-    "codeCaption": "Login throttling keyed by e-mail — every request reaches Laravel from the same Next.js server IP."
-  },
   "Experience": {
     "label": "Experience",
     "title": "Where I've been building",

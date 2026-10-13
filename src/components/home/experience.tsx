@@ -11,7 +11,7 @@ export async function Experience() {
 
   return (
     <section id={sections.experience} aria-label={t("title")} className="gutter scroll-mt-20 py-24 md:py-36">
-      <SectionLabel index="06" label={t("label")} />
+      <SectionLabel index="05" label={t("label")} />
       <div className="mt-10 grid items-end gap-6 md:grid-cols-12">
         <SplitReveal text={t("title")} className="display text-[13vw] md:col-span-8 md:text-[7.5vw]" />
         <p className="label leading-relaxed normal-case tracking-normal md:col-span-4 md:text-right">{t("noImages")}</p>

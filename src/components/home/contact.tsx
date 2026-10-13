@@ -27,7 +27,7 @@ export async function Contact() {
 
   return (
     <section id={sections.contact} aria-label={t("title")} className="gutter scroll-mt-20 py-24 md:py-40">
-      <SectionLabel index="08" label={t("label")} />
+      <SectionLabel index="07" label={t("label")} />
 
       <div className="mt-14 grid items-center gap-12 md:mt-20 md:grid-cols-12">
         <div className="flex flex-wrap items-end gap-6 md:col-span-8 md:gap-10">

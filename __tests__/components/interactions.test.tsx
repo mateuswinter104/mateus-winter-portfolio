@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 import { toast } from "sonner";
 import { CopyEmail } from "@/components/home/copy-email";
 import { FaqList } from "@/components/home/faq-list";
-import { WhatIDoList } from "@/components/home/what-i-do";
 import { Magnetic } from "@/components/motion/magnetic";
 import { WordReveal } from "@/components/motion/word-reveal";
 import { resetMediaQueries } from "../../test-utils/match-media";
@@ -56,35 +55,6 @@ describe("FaqList", () => {
 
     expect(screen.getByText(items[2].a)).toBeVisible();
     expect(screen.queryByText(items[0].a)).not.toBeInTheDocument();
-  });
-});
-
-describe("WhatIDoList", () => {
-  const items = messagesEn.Services.items;
-  const previews = items.map((item) => <span key={item.title}>preview of {item.title}</span>);
-
-  it("swaps the preview and the description for the chosen service", async () => {
-    const user = userEvent.setup();
-    renderWithIntl(<WhatIDoList items={items} previews={previews} />);
-    const buttons = screen.getAllByTestId("service-item");
-
-    expect(buttons[0]).toHaveAttribute("aria-pressed", "true");
-    await user.click(buttons[3]);
-
-    expect(buttons[3]).toHaveAttribute("aria-pressed", "true");
-    expect(buttons[0]).toHaveAttribute("aria-pressed", "false");
-    await waitFor(() => expect(screen.getByTestId("service-body")).toHaveTextContent(items[3].body));
-    expect(screen.getByText(`preview of ${items[3].title}`)).toBeInTheDocument();
-  });
-
-  it("follows keyboard focus", async () => {
-    const user = userEvent.setup();
-    renderWithIntl(<WhatIDoList items={items} previews={previews} />);
-
-    await user.tab();
-    await user.tab();
-
-    expect(screen.getAllByTestId("service-item")[1]).toHaveAttribute("aria-pressed", "true");
   });
 });
 

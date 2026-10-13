@@ -10,7 +10,7 @@ test.describe("home page", () => {
 
   test("tells the whole story section by section", async ({ page }) => {
     await page.goto("/en");
-    for (const name of ["About me", "Tools I ship with", "Selected work", "From idea to production", "What I do", "Where I've been building", "Quick answers to common questions", "Let's talk"]) {
+    for (const name of ["About me", "Tools I ship with", "Selected work", "From idea to production", "Where I've been building", "Quick answers to common questions", "Let's talk"]) {
       await expect(page.getByRole("region", { name })).toBeAttached();
     }
     await expect(page.getByTestId("process-card")).toHaveCount(4);
