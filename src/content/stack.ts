@@ -2,7 +2,6 @@ import type { ComponentType, SVGProps } from "react";
 import { Drama } from "lucide-react";
 import {
   SiClaude,
-  SiExpo,
   SiFigma,
   SiGit,
   SiJest,
@@ -23,7 +22,7 @@ export const stack: StackItem[] = [
   { name: "React", icon: SiReact },
   { name: "Next.js", icon: SiNextdotjs },
   { name: "TypeScript", icon: SiTypescript },
-  { name: "React Native", icon: SiExpo },
+  { name: "React Native", icon: SiReact },
   { name: "Laravel", icon: SiLaravel },
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "Tailwind CSS", icon: SiTailwindcss },
